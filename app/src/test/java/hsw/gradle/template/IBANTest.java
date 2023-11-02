@@ -9,6 +9,15 @@ public class IBANTest {
         assertEquals(classUnderTest.check(myIBAN), true);
     }
 
+    @Test void IBANByIncrements(){
+        String myIBAN = "DE68210501700012345678";
+        String pruefzahl = "68";
+        String blz = "21050170";
+        String kntnr = "0012345678";
+        IBAN classUnderTest = new IBAN(pruefzahl, blz, kntnr);
+        assertEquals(classUnderTest.check(myIBAN), true);
+    }
+
     @Test void IBANnotDE() {
         String myIBAN = "US68210501700012345678";
         IBAN classUnderTest = new IBAN(myIBAN);
