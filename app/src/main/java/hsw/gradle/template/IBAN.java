@@ -18,6 +18,10 @@ public class IBAN {
         if(IBANnumber.length() != 22) {
             return false;
         }
+
+        if(!(IBANnumber.substring(0,1).equals("DE"))){
+            return false;
+        }
         //System.out.println(IBANnumber);
 
         // step 2: move first 4 digits to the end

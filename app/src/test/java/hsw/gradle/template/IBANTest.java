@@ -9,6 +9,12 @@ public class IBANTest {
         assertEquals(classUnderTest.check(myIBAN), true);
     }
 
+    @Test void IBANnotDE() {
+        String myIBAN = "US68210501700012345678";
+        IBAN classUnderTest = new IBAN(myIBAN);
+        assertEquals(classUnderTest.check(myIBAN), false);
+    }
+
     @Test void IBANWrong() {
         String myIBAN = "ZZ68210501700012345678";
         IBAN classUnderTest = new IBAN(myIBAN);
