@@ -19,7 +19,7 @@ public class IBAN {
             return false;
         }
 
-        if(!(IBANnumber.substring(0,1).equals("DE"))){
+        if(!(IBANnumber.startsWith("DE"))){
             return false;
         }
         //System.out.println(IBANnumber);
