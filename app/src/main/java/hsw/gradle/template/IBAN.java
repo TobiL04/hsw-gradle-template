@@ -12,6 +12,10 @@ public class IBAN {
         this.IBANnumber = "DE" + pruefzahl + bankleitzahl + kontonummer;
     }
 
+    public String getKontonummer(String iban){
+        return iban.substring(12, 22);
+    }
+
     public boolean check(String IBANnumber) {
         // explanation source: https://de.wikipedia.org/wiki/Internationale_Bankkontonummer#Prüfsumme
         // step 1: IBAN needs to be 18 digits long
